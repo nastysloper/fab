@@ -18,4 +18,4 @@ for l in task.stdout.readlines():
 # for l in task.stdout.readlines():
    # print "This file is not committed. ==> %s" % (l)
 if os.path.getsize("/Users/richvogt/Code/git_test") > 0:
-  print "Please commit, checkout, or stash your changes."
+  print("Please commit, checkout, or stash your changes.")
