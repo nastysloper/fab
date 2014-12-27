@@ -11,11 +11,13 @@ import os
 task = subprocess.Popen(['git', 'status', '--porcelain'], stdout=subprocess.PIPE)
 
 for l in task.stdout.readlines():
-   print "This file is not committed. ==> %s" % (l.split()[1])
+  flag = True
+  print "This file is not committed. ==> %s" % (l.split()[1])
+
+if flag:
+  print("Please commit, checkout, or stash your changes.")
 
 # print type(task.stdout)
 
 # for l in task.stdout.readlines():
    # print "This file is not committed. ==> %s" % (l)
-if os.path.getsize("/Users/richvogt/Code/git_test") > 0:
-  print("Please commit, checkout, or stash your changes.")
