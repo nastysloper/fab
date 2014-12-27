@@ -18,7 +18,8 @@ if flag:
   print("Please commit, checkout, or stash your changes.")
 else:
   print "pull"
-  subprocess.Popen(['git', 'fetch'])
+  fetch = subprocess.Popen(['git', 'fetch'])
+  fetch.communicate([0])
 
 # print type(task.stdout)
 
