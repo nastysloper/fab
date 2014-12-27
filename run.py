@@ -9,7 +9,7 @@ import os
 # subprocess.call(['ls', '-la'])
 
 task = subprocess.Popen(['git', 'status', '--porcelain'], stdout=subprocess.PIPE)
-
+flag = False
 for l in task.stdout.readlines():
   flag = True
   print "This file is not committed. ==> %s" % (l.split()[1])
