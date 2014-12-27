@@ -16,6 +16,8 @@ for l in task.stdout.readlines():
 
 if flag:
   print("Please commit, checkout, or stash your changes.")
+else:
+  subprocess.Popen(['git', 'status', '--porcelain'])
 
 # print type(task.stdout)
 
