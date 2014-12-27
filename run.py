@@ -18,7 +18,7 @@ if flag:
   print("Please commit, checkout, or stash your changes.")
 else:
   print "pull"
-  subprocess.Popen(['git', 'status', '--porcelain'])
+  subprocess.Popen(['git', 'fetch'])
 
 # print type(task.stdout)
 
