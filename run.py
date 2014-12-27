@@ -20,8 +20,8 @@ else:
   print "pull"
   fetch = subprocess.Popen(['git', 'fetch'])
   fetch.communicate([0])
-
-# print type(task.stdout)
+  merge = subprocess.Popen(['git', 'merge', '--ff-only'])
+  fetch.communicate([0])
 
 # for l in task.stdout.readlines():
    # print "This file is not committed. ==> %s" % (l)
